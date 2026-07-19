@@ -71,7 +71,7 @@ strategy and control series are measured on the identical basis.
 
 ## The MAD series
 
-1. **MAD-Markov** — position within the displacement band forecasts the next
+1. **[MAD-Markov](https://github.com/madvelocity/MAD-Markov-Model)** — position within the displacement band forecasts the next
    regime transition.
 2. **[MAD-Velocity](https://github.com/madvelocity/MAD-Velocity-Signal)** — the
    composition of displacement change converts the forecast into an entry gate.
