@@ -1,0 +1,4 @@
+model,ic,t_ic,top3_edge_bps,t_edge,coverage_pct
+score_R,0.0198,2.3,1.31,2.45,98.0
+score_S,0.0523,4.23,3.44,3.81,98.0
+score_RS,0.0496,4.34,3.38,3.69,98.0
