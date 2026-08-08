@@ -1,0 +1,57 @@
+{
+ "protocol": "AREA_PROTOCOL.md (study 10)",
+ "script_sha256": "281d1b062eb65bce60b178831d58d64ce2f917dce31383ac6a6e4f8ce7ff8870",
+ "SEED": 7,
+ "STUDY_STREAM": 15,
+ "RW_WIN": 21,
+ "HORIZONS": [
+  5,
+  21
+ ],
+ "NW_LAG": 3,
+ "BOOT_B": 2000,
+ "BOOT_BLOCK": 3.0,
+ "BAR_T": 2.5,
+ "BAR_P": 0.0127,
+ "DOM_T": 2.0,
+ "WIN_START": "2016-01-01",
+ "SIM_END": "2025-12-31",
+ "ASOF": "2026-07-16",
+ "CRISIS": [
+  [
+   "2020-02",
+   "2020-06"
+  ],
+  [
+   "2022-01",
+   "2022-12"
+  ]
+ ],
+ "COST_BPS": 5.0,
+ "COST_MODEL": "5 bps per side x 2 sides = 10 bps, one long-D1 round trip; EW benchmark leg is paper (untraded)",
+ "n_months": 120,
+ "panel_median": 500,
+ "n_delist_valued": 82,
+ "delist_rule": "valued at last close (liquidation-at-last)",
+ "n_break_excluded": 26,
+ "break_rule": "house era convention: single-day >5x/<0.2x or >30d gap inside the 21-session forward path excludes the name-month",
+ "n_area_nan_excl": 546,
+ "tie_fill_months": {
+  "a_ep_f5": 4,
+  "a_ep_f21": 4
+ },
+ "tie_rule": "D1-boundary tie blocks filled with tie-mass mean (unbiased-fill expectation)",
+ "spy_exhibit": "SPY.csv not in store -- exhibit skipped",
+ "cells": [
+  "AREA_EP_f5",
+  "AREA_EP_f21",
+  "AREA_RW_f5",
+  "AREA_RW_f21"
+ ],
+ "tiers": {
+  "AREA_EP_f5": "dead",
+  "AREA_EP_f21": "dead",
+  "AREA_RW_f5": "KNOWN-EFFECT RECOVERY (repackaged reversal / point-z, no novelty)",
+  "AREA_RW_f21": "dead"
+ }
+}

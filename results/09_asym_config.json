@@ -1,0 +1,31 @@
+{
+ "protocol": "ASYM_STRATEGY_PROTOCOL.md + AMENDMENT_01",
+ "script_sha256": "43bf1e9521a9f39f5fed5a8d9a1bb6a249588b511f95bc9aa3691c22bfbd3dae",
+ "SEED": 7,
+ "STUDY_STREAM": 12,
+ "SEEDS_SCREEN": 200,
+ "SEEDS_FULL": 500,
+ "BAR_PRIMARY": 99.15,
+ "BAR_SUGGEST": 98.3,
+ "MIN_CELL_N": 1000,
+ "ASOF": "2026-07-16",
+ "TOP_Q": 100,
+ "COST_BPS": 5.0,
+ "SPLIT": "2022-01-01",
+ "SIM_END": "2025-12-31",
+ "weakness": "z<0 at signal close (08 ADDS inheritance; amd 1)",
+ "exposure_adjusted_defs": {
+  "invested_frac": "mean(1 - cash/equity)",
+  "in_trade_day": "daily equity return on days n_pos>0",
+  "in_trade_sharpe": "sqrt(252)*mean/std of in-trade days",
+  "deployed_cagr": "(1+mean in-trade day)^252 - 1"
+ },
+ "family_looks": [
+  "ADDS p94.4",
+  "ADDS_HALF p85.0",
+  "ADDS_LAST p91.0",
+  "A",
+  "B",
+  "C"
+ ]
+}

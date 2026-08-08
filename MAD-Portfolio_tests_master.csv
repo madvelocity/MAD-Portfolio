@@ -1,0 +1,56 @@
+study,run_date,run,final_equity,cagr,oos_cagr,sharpe,oos_sharpe,maxdd,med_trade_ret,win_rate,trades,adds,null_standing,verdict
+12,8/2/26,ONE_BOOK," $1,060,456.71 ",0.2671,0.1898,0.996,0.791,-0.406,0.0316,0.74,741,214,"3 anchors reproduced to the cent (BASELINE/ADDS/BRIDGE); margin-safety flags clean; 669 bridges; 201 margin-financed adds; interest $42,704",ENGINEERING RUN (not a registered study; no verdict): the deployed one-book config -- RANKVOL + adds into weakness + 30% margin; oos_wealth 1.997 vs incumbent 2.049; production engine verified
+11,8/2/26,MARGIN_BRIDGE," $971,305.16 ",0.2559,0.1964,0.951,0.824,-0.4961,0.0313,0.717,943,870,"p96.6 of 500-seed random-name null (p95 $912,359); wires clean; 9 forced de-lev sales; bridged=regular quality boot p.49",DEAD: fails the OOS window under the registered forced-liquidation remedy (oos_wealth 2.042 vs 2.049 strict); full-window pass + null pass reach no tier; funding/capacity look 1 consumed
+6,7/28/26,ADDS_BENCH_N10," $754,818.05 ",0.2246,0.2196,1.043,1.039,-0.3621,0.0311,0.751,583,145,p92 (n=100),beats baseline; p92 of 100-seed null; engine = 2 trades
+8,7/30/26,ADDS," $754,818.05 ",0.2246,0.2196,1.043,1.039,-0.3621,0.031067,0.751,583,145,p94.4 (n=500),SETTLED DEAD: p94.4 vs p95 at 500 seeds
+9,8/1/26,ADDS," $754,818.05 ",0.2246,0.2196,1.043,1.039,-0.3621,0.031067,0.751,583,145,,08 re-run exact; H context: top-2 share 10.9%; deployed edge is mean-driven (median flat)
+8,7/30/26,ADDS_LAST," $687,698.08 ",0.2132,0.2091,0.994,1.023,-0.4164,0.029885,0.732,667,73,p91.0 (n=200),SETTLED DEAD: p91.0 vs its 200-seed null
+8,7/30/26,ADDS_HALF," $657,979.98 ",0.2079,0.1925,0.999,0.96,-0.3473,0.031578,0.745,609,216,p85.0 (n=200),SETTLED DEAD: fails OOS; add ledger net -$38k
+4,2026-07-19 (published),RANKVOL_N5," $651,013.26 ",0.2066,0.1781,0.951,0.808,-0.2982,0.0313,0.718,400,,,published menu (see paper)
+5,7/27/26,RANKVOL_COV," $608,947.59 ",0.1985,0.194,0.948,0.975,-0.3864,0.0295,0.707,709,,,covered-pair check: volume wins
+5,7/27/26,SRANK," $604,759.47 ",0.1977,0.1464,0.975,0.792,-0.3061,0.0291,0.717,736,,,"DEAD: wins full decade, fails OOS"
+6,7/28/26,ADDS_DEEP_BENCH_N10," $589,561.04 ",0.1946,0.2215,0.943,1.092,-0.3866,0.0296,0.717,720,8,,8 adds -- noise
+9,8/1/26,ADDS_LEAN_SIZER," $589,300.66 ",0.1946,0.145,0.903,0.705,-0.3603,0.031067,0.765,489,187,p49.5/p36.0 (N1/N2 n=200),DEAD: at random's median; scrambled maps size BETTER; fails OOS
+9,8/1/26,ADDS_LEAN_SELECT," $588,155.03 ",0.1944,0.1974,0.932,0.969,-0.3866,0.031623,0.717,710,10,p78.0/p71.0 (N1/N2 n=200),DEAD: killed at screen; lean>0 near-empty -- 10 adds; none after 2018-11
+7,7/29/26,LEAN_SIZER," $585,395.14 ",0.1938,0.2295,0.906,1.031,-0.3806,0.031517,0.718,716,,= p95 tie (16-class null),DEAD: ties own permutation null; wrong map earned more
+4,2026-07-19 (published),RANKVOL_BENCH_N10," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.0311,0.713,721,,,THE INCUMBENT -- published headline
+5,7/27/26,RANKVOL," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.0311,0.713,721,,,incumbent re-run; reconciled exact
+6,7/28/26,RANKVOL_BENCH_N10," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.0311,0.713,721,0,,incumbent re-run; reconciled exact
+7,7/29/26,RANKVOL_BENCH_N10," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.031067,0.713,721,,,incumbent re-run; reconciled exact
+7,7/29/26,LEAN_TIEBREAK," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.031067,0.713,721,,,EMPTY: identical to baseline (entries cell-pinned)
+7,7/29/26,LEAN_SELECT," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.031067,0.713,721,,,EMPTY: identical to baseline (entries cell-pinned)
+8,7/30/26,RANKVOL," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.031067,0.713,721,0,,incumbent re-run; reconciled exact
+9,8/1/26,RANKVOL," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.031067,0.713,721,0,,incumbent re-run; reconciled exact (6th)
+11,8/2/26,RANKVOL," $552,887.57 ",0.187,0.1974,0.904,0.969,-0.3866,0.0311,0.713,721,,,incumbent re-run through the study-11 engine; reconciled exact (7th)
+9,8/1/26,ADDS_LEAN_GATE," $551,211.26 ",0.1866,0.1974,0.903,0.969,-0.3866,0.030859,0.713,720,1,p31.5/p38.5 (N1/N2 n=200),DEAD: gate fired once in a decade
+7,7/29/26,LEAN_FILTER," $505,052.49 ",0.1763,0.1974,0.865,0.969,-0.3866,0.029469,0.714,717,,,DEAD: scrambled maps veto better
+4,2026-07-19 (published),SCORE_R_N5," $486,058.70 ",0.1717,0.0755,0.834,0.454,-0.3986,0.0265,0.691,363,,,published menu (see paper)
+5,7/27/26,COMPOSITE_COV," $468,636.19 ",0.1675,0.1164,0.893,0.697,-0.3346,0.0274,0.707,716,,,covered-pair check: composite loses
+5,7/27/26,COMPOSITE," $466,424.27 ",0.1669,0.1164,0.893,0.697,-0.3346,0.0275,0.709,717,,,DEAD: loses both windows
+5,7/27/26,CAPRANK_COV," $459,815.96 ",0.1652,0.0923,0.894,0.568,-0.3023,0.0264,0.719,732,,,covered-pair check: cap loses
+11,8/2/26,BRIDGE_SPY_DISCLOSURE," $440,583.01 ",0.1603,0.088,0.774,0.492,-0.3715,,,911,,,exhibit only (not verdict-bearing): SPY at the same admissions/financing LOSES to the unlevered incumbent -- leverage timing alone is negative
+4,2026-07-19 (published),RANKVOL_N10," $426,301.67 ",0.1564,0.0895,0.806,0.523,-0.318,0.0273,0.707,750,,,published menu (see paper)
+5,7/27/26,CAPRANK," $420,519.99 ",0.1549,0.0856,0.841,0.537,-0.3023,0.0266,0.714,713,,,DEAD: loses both windows + covered pair
+6,7/28/26,ALL_EW_BENCH," $411,519.26 ",0.1524,0.0697,0.759,0.441,-0.4233,,,3904,0,,DEAD: gives back half the alpha
+4,2026-07-19 (published),SCORE_S_BENCH_N10," $405,670.61 ",0.1507,0.1185,0.757,0.616,-0.3273,0.0314,0.699,662,,,published menu (see paper)
+4,2026-07-19 (published),RANKVOL_N20," $385,276.07 ",0.1448,0.0755,0.796,0.498,-0.3402,0.0259,0.702,1456,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_S_N5," $383,309.78 ",0.1442,0.1246,0.659,0.617,-0.3623,0.0314,0.674,316,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_R_BENCH_N10," $360,648.19 ",0.1372,0.1069,0.719,0.599,-0.3842,0.0284,0.707,714,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_RS_BENCH_N10," $346,001.79 ",0.1325,0.1216,0.663,0.621,-0.461,0.0315,0.714,672,,,published menu (see paper)
+4,2026-07-19 (published),SPY," $339,956.69 ",0.1305,0.0951,0.77,0.594,-0.341,,,0,,,index control (cap-weight)
+6,7/28/26,SPY," $339,956.69 ",0.1305,0.0951,0.77,0.594,-0.341,,,0,0,,control
+6,7/28/26,RANKVOL_BENCH_N50," $339,007.86 ",0.1302,0.0613,0.771,0.458,-0.3774,0.0247,0.708,3092,0,,DEAD: 2% slots collapse to SPY +/- $1k
+4,2026-07-19 (published),SCORE_R_N10," $318,216.95 ",0.123,0.0642,0.691,0.426,-0.3596,0.0257,0.686,703,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_S_N10," $280,111.16 ",0.1088,0.0524,0.571,0.349,-0.359,0.0295,0.666,593,,,published menu (see paper)
+4,2026-07-19 (published),RSP," $253,931.38 ",0.0979,0.0418,0.597,0.327,-0.3963,,,0,,,index control (equal-weight)
+6,7/28/26,RSP," $253,931.38 ",0.0979,0.0418,0.597,0.327,-0.3963,,,0,0,,control
+6,7/28/26,ALL_EW_ALL," $242,139.55 ",0.0927,0.0328,0.548,0.27,-0.4332,,,17806,0,,DEAD: loses to RSP after costs
+4,2026-07-19 (published),SCORE_R_N20," $239,509.59 ",0.0915,0.0151,0.557,0.173,-0.3778,0.0239,0.681,1397,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_S_N20," $234,371.12 ",0.0891,0.0533,0.512,0.36,-0.3771,0.0284,0.679,1211,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_RS_N20," $213,930.99 ",0.0792,0.0378,0.468,0.286,-0.4318,0.0249,0.676,1234,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_RS_N10," $185,874.02 ",0.0641,0.0231,0.385,0.213,-0.5483,0.0253,0.664,602,,,published menu (see paper)
+4,2026-07-19 (published),SCORE_RS_N5," $176,208.60 ",0.0584,0.0316,0.349,0.249,-0.5832,0.0254,0.697,304,,,published menu (see paper)
+10,8/2/26,AREA_EP_f5,,,,,,,,,,,NW-t -1.44 boot p.142,DEAD: episode area carries no 5d signal (mean -20.8 bps)
+10,8/2/26,AREA_EP_f21,,,,,,,,,,,NW-t +0.06 boot p.951,DEAD: episode area carries no 21d signal
+10,8/2/26,AREA_RW_f5,,,,,,,,,,,NW-t -3.13 boot p.0015 (bars 2.50/.0127); vsZ t -1.33 vsREV t -1.89 (dom bar +2.0),"KNOWN-EFFECT RECOVERY: -39.1 bps/mo INVERTED (deep area -> continued weakness, not bounce); robust (best-month, halves, calm -27); fails novelty vs z/reversal; NOTE benchmarks themselves null (Z t-1.23, REV t-0.29)"
+10,8/2/26,AREA_RW_f21,,,,,,,,,,,NW-t -0.17 boot p.875,DEAD: no 21d signal; effect is a ~1-week phenomenon

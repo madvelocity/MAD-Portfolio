@@ -1,0 +1,16 @@
+{
+ "VOL_BAND": 10,
+ "MIN_CELL_N": 1000,
+ "ENV_SEEDS": 100,
+ "SEED": 7,
+ "ASOF": "2026-07-16",
+ "TOP_Q": 100,
+ "COST_BPS": 5.0,
+ "SPLIT": "2022-01-01",
+ "SIM_END": "2025-12-31",
+ "WORST_K": 4,
+ "N_OFFSETS": 5,
+ "K": 5,
+ "pass_channel": "p10_trade_ret",
+ "null": "persistent-permutation per seed, all overlay arms"
+}
